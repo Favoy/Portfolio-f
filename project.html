@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Oloyede Favour</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sidebar">
+    <img src="assets/LinkedIn.jpg" alt="Profile Picture">
+    <!-- Your nav links go here -->
+    <h2>Oloyede Favour</h2>
+    <a href="index.html">Home</a>
+    <a href="project.html">Projects</a>
+    <a href="freelance.html">Freelance</a>
+    <a href="contact.html">Contact</a>
+  </div>
+    <!-- <nav>
+        <h2>Oloyede Favour</h2>
+        <a href="index.html">Home</a>
+        <a href="project.html">Projects</a>
+        <a href="freelance.html">Freelance</a>
+        <a href="contact.html">Contact</a>
+      </nav> -->
+<body>
+    <main>
+      <div class="main-content">
+      <section id="project" class="fade-in-section">
+  <h1>My Projects</h1>
+  <div class="project-card">
+        <h2>Titanic Survival Prediction</h3>
+        <p>Used Python and scikit-learn to predict survival outcomes based on Titanic passenger data. Applied logistic regression and random forest classifiers, evaluated performance using accuracy and ROC-AUC.</p>
+        <a href="https://github.com/favoy/Titanic-Project" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h2>Sales Prediction using Advertising Data</h3>
+        <p>Built a regression model to predict sales based on TV advertising spend. Used pandas, matplotlib, and scikit-learn.</p>
+        <a href="https://github.com/favoy/Sales-Prediction" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h2>Credit Card Fraud Detection</h2>
+        <p>Detected fraudulent transactions using SMOTE and a random forest classifier. Evaluated with ROC AUC and Precision-Recall metrics.</p>
+        <a href="https://github.com/favoy/Fraud-Detection" target="_blank">View on GitHub</a>
+      </div>
+      </section>
+      </div>
+</main>
+<script>
+  const faders = document.querySelectorAll('.fade-in-section');
+
+  const appearOptions = {
+      threshold: 0.1
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+      entries.forEach(entry => {
+          if (!entry.isIntersecting) {
+              return;
+          } else {
+              entry.target.classList.add('is-visible');
+              appearOnScroll.unobserve(entry.target);
+          }
+      });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+  });
+</script>
+
+<div class="footer">
+  © 2025 Oloyede Favour. All rights reserved.
+</div>
+</body>
+</html>

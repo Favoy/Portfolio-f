@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oloyede Favour Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="sidebar">
+      <img src="assets/LinkedIn.jpg" alt="Profile Picture">
+      <!-- Your nav links go here -->
+      <h2>Oloyede Favour</h2>
+      <a href="index.html">Home</a>
+      <a href="project.html">Projects</a>
+      <a href="freelance.html">Freelance</a>
+      <a href="contact.html">Contact</a>
+      <a href="assets/Oloyede Favour CV.pdf" download>Download CV</a>
+  </div>
+   
+  <!-- <nav>
+    <h2>Oloyede Favour</h2>
+    <a href="index.html">Home</a>
+    <a href="project.html">Projects</a>
+    <a href="freelance.html">Freelance</a>
+    <a href="contact.html">Contact</a>
+  </nav> -->
+  <main>
+    <div class="main-content">
+    <section id="home" class="fade-in-section">
+      <h2>About</h2>
+      <p class="subtitle">Aspiring Data Scientist | Beginner GIS Enthusiast | Open to Freelance Work</p>
+      <p>
+        I’m Oloyede Favour, a data analyst in training
+        with a passion for turning data into meaningful insights.
+        Currently, I work as a data analyst
+        with a startup in the AEC (Architecture, Engineering, and Construction)
+        industry, where I support business decisions through data-driven solutions.
+        I'm also on the journey to becoming a certified data scientist, preparing
+        for my certification exam via DataCamp. With each dataset I explore and every
+        project I contribute to, I’m building a solid foundation toward a thriving career
+        in data science. I’m driven by curiosity, committed to growth, and excited about
+        the endless possibilities that come with data.
+      </p>
+      <a href="assets/Oloyede Favour CV.pdf" download class="button">Download My CV</a>
+    </section>
+
+    <section class="fade-in-section">
+        <h2>Education</h2>
+        <ul>
+          <li><strong>Bachelor of Science <i>(Physics)</i> </strong> - Landmark University</li>
+          <li><strong>Data Scientist Certificate </strong> - DataCamp SQL Associate Certification  (In view)</li>
+        </ul>
+      </section>
+
+      <section class="fade-in-section"> 
+        <h2>Core Skills</h2>
+        <ul>
+          <li> Machine Learning and Dashboard Design</li>
+          <li>Prioritization</li>
+          <li>Team Management</li>
+          <li>Client Engagement</li>
+          <li>Statistical Analysis</li>
+          <li>Creative Problem-solving</li>
+        </ul>
+      </section>
+  </div>
+</main>
+<script>
+  const faders = document.querySelectorAll('.fade-in-section');
+
+  const appearOptions = {
+      threshold: 0.1
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+      entries.forEach(entry => {
+          if (!entry.isIntersecting) {
+              return;
+          } else {
+              entry.target.classList.add('is-visible');
+              appearOnScroll.unobserve(entry.target);
+          }
+      });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+  });
+</script>
+
+<div class="footer">
+  © 2025 Oloyede Favour. All rights reserved.
+</div>
+</body>
+</html>

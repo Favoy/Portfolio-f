@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Oloyede Favour</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sidebar">
+    <img src="assets/LinkedIn.jpg" alt="Profile Picture">
+    <!-- Your nav links go here -->
+    <h2>Oloyede Favour</h2>
+    <a href="index.html">Home</a>
+    <a href="project.html">Projects</a>
+    <a href="freelance.html">Freelance</a>
+    <a href="contact.html">Contact</a>
+  </div>
+    <!-- <nav>
+        <h2>Oloyede Favour</h2>
+        <a href="index.html">Home</a>
+        <a href="project.html">Projects</a>
+        <a href="freelance.html">Freelance</a>
+        <a href="contact.html">Contact</a>
+      </nav> -->
+<main class="content">
+  <div class="main-content">
+  <section id="contact" class="fade-in-section">
+  <h1>Contact Me</h1>
+   <p>If you have any project in mind or want to collaborate, feel free to reach out.</p>
+  <form action="https://formspree.io/f/xvgaggod" method="POST">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <button type="submit">Send</button>
+  </form>
+</section>
+</div>
+</main>
+<script>
+  const faders = document.querySelectorAll('.fade-in-section');
+
+  const appearOptions = {
+      threshold: 0.1
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+      entries.forEach(entry => {
+          if (!entry.isIntersecting) {
+              return;
+          } else {
+              entry.target.classList.add('is-visible');
+              appearOnScroll.unobserve(entry.target);
+          }
+      });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+  });
+</script>
+<div class="footer">
+  © 2025 Oloyede Favour. All rights reserved.
+</div>
+</body>
+</html>
