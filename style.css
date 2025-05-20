@@ -339,4 +339,68 @@ body {
   opacity: 1;
   transform: none;
 }
+/*responsiveness  */
+/* ========== Responsive Layout Fixes ========== */
+@media screen and (max-width: 1024px) {
+  .main-content {
+    margin-left: 240px;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .sidebar img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0;
+  }
+
+  .sidebar h2 {
+    display: none;
+  }
+
+  .sidebar a {
+    margin: 5px;
+    font-size: 16px;
+  }
+
+  .main-content {
+    margin: 0;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .sidebar a {
+    font-size: 14px;
+    margin: 4px;
+  }
+
+  h1, h2 {
+    font-size: 1.4rem;
+  }
+
+  .project-card {
+    padding: 15px;
+  }
+
+  .footer {
+    font-size: 12px;
+    padding: 15px;
+  }
+}
 
