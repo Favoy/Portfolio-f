@@ -250,6 +250,7 @@ xj */
    /* ---- Base Styling ---- */
 body {
   font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
   background-color: #f9f9f9;
   color: #1f2937;
   margin: 0;
@@ -296,7 +297,24 @@ body {
 /* ---- Main Content Styling ---- */
 .main-content {
   margin-left: 260px;
-  padding: 20px;
+/*   padding: 20px; */
+  padding: 40px 20px;
+  max-width: 900px;
+  margin-right: auto;
+}
+/*Button styling  */
+.button {
+  background-color: #3D5A80;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.button:hover {
+  background-color: #2b4865;
 }
 
 /* ---- Project Card Styling ---- */
@@ -313,7 +331,41 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
-
+/* Freelance card */
+ .services ul {
+  list-style: none;
+  padding: 0;
+}
+.services li::before {
+  content: '💼 ';
+  margin-right: 8px;
+}
+/* contact page */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+input, textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+button {
+  background-color: #3D5A80;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #2b4865;
+}
 /* ---- Footer Styling ---- */
 .footer {
   text-align: center;
