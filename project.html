@@ -23,66 +23,78 @@
         <a href="freelance.html">Freelance</a>
         <a href="contact.html">Contact</a>
       </nav> -->
-<body>
+
     <main>
       <div class="main-content">
       <section id="project" class="fade-in-section">
   <h1>My Projects</h1>
   <div class="project-card">
         <h2>Titanic Survival Prediction</h3>
-        <p> Objective: Predict passenger survival on the Titanic using demographic and travel-related features.
-            Tools: Python, Pandas, Scikit-learn, Matplotlib.
-            Approach: Built and compared Logistic Regression, Random Forest Classifier and other models using cleaned Titanic dataset. 
-            Applied feature engineering (e.g., title extraction, family size), handled missing values, and tuned hyperparameters for optimal accuracy.
-            Result: Achieved over 80% accuracy. Identified key survival predictors such as gender, ticket class, and age group.
-        </p>
-        <a href="https://github.com/favoy/Titanic-Project" target="_blank">View on GitHub</a>
-      </div>
+         <p>
+            Developed a classification model to predict passenger survival using demographic and ticket data from the Titanic dataset.<br>
+            <strong>Tools:</strong> Python, Pandas, Scikit-learn, Matplotlib<br>
+            <strong>Approach:</strong> Applied feature engineering (e.g., title extraction), handled missing values, and optimized multiple models including Logistic Regression and Random Forest.<br>
+            <strong>Outcome:</strong> Achieved 80%+ accuracy and identified key survival predictors such as gender, age, and class.
+          </p>
+          <a href="https://github.com/favoy/Titanic-Project" target="_blank">View on GitHub</a>
+        </div>
       <div class="project-card">
-        <h2>Sales Prediction using Advertising Data</h3>
-        <p>Objective: Forecast product sales based on television advertising spend.
-           Tools: Python, Pandas, Seaborn, Matplotlib, Scikit-learn.
-           Approach: Developed a linear regression model using a clean advertising dataset. 
-           Explored the relationship between advertising budget and sales through visualizations and correlation analysis.
-           Result: Model showed a strong positive relationship (R² = 0.82) between TV spend and sales. Helped quantify ROI of TV advertising.
-        </p>
-        <a href="https://github.com/favoy/Sales-Prediction" target="_blank">View on GitHub</a>
-      </div>
+        <h2>Sales Prediction with Advertising Data</h2>
+          <p>
+            Built a linear regression model to predict product sales based on advertising spend, focusing on TV ads.<br>
+            <strong>Tools:</strong> Python, Pandas, Seaborn, Matplotlib, Scikit-learn<br>
+            <strong>Approach:</strong> Conducted exploratory data analysis, visualized relationships, and trained a regression model to estimate impact of ad budgets.<br>
+            <strong>Outcome:</strong> Achieved R² of 0.82, revealing a strong correlation between TV spending and sales performance.
+          </p>
+          <a href="https://github.com/favoy/Sales-Prediction" target="_blank">View on GitHub</a>
+        </div>
       <div class="project-card">
-        <h2>Credit Card Fraud Detection</h2>
-        <p>Objective: Detect fraudulent credit card transactions in an imbalanced dataset to support real-world financial risk mitigation.
-           Tools: Python, Scikit-learn, Pandas, SMOTE
-           Approach: Applied oversampling using SMOTE to balance the dataset. 
-           Trained a Random Forest Classifier and evaluated model performance using Precision-Recall AUC and ROC AUC scores.
-           Result: Boosted recall significantly, enabling the model to detect rare fraud cases. Highlighted key features like transaction amount and time.
-        </p>
-        <a href="https://github.com/favoy/Fraud-Detection" target="_blank">View on GitHub</a>
-      </div>
+       <h2>Credit Card Fraud Detection</h2>
+          <p>
+            Created a model to detect fraudulent credit card transactions within an imbalanced dataset.<br>
+            <strong>Tools:</strong> Python, Pandas, Scikit-learn, SMOTE<br>
+            <strong>Approach:</strong> Used oversampling (SMOTE) to handle class imbalance, trained a Random Forest classifier, and evaluated with ROC and PR AUC metrics.<br>
+            <strong>Outcome:</strong> Improved recall significantly, increasing the model's ability to detect rare fraud cases accurately.
+          </p>
+          <a href="https://github.com/favoy/Fraud-Detection" target="_blank">View on GitHub</a>
+        </div>
+        
       </section>
-      </div>
+    </div>
 </main>
 <script>
-  const faders = document.querySelectorAll('.fade-in-section');
+//   const faders = document.querySelectorAll('.fade-in-section');
+//    const appearOptions = { threshold: 0.1 };
 
-  const appearOptions = {
-      threshold: 0.1
-  };
+//   const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+//       entries.forEach(entry => {
+//           if (!entry.isIntersecting) { return;
+//           } else {
+//               entry.target.classList.add('is-visible');
+//               appearOnScroll.unobserve(entry.target);
+//           }
+//       });
+//   }, appearOptions);
 
-  const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+//   faders.forEach(fader => {
+//       appearOnScroll.observe(fader);
+//   });
+//
+    const faders = document.querySelectorAll('.fade-in-section');
+    const appearOptions = { threshold: 0.1 };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
       entries.forEach(entry => {
-          if (!entry.isIntersecting) {
-              return;
-          } else {
-              entry.target.classList.add('is-visible');
-              appearOnScroll.unobserve(entry.target);
-          }
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
       });
-  }, appearOptions);
+    }, appearOptions);
 
-  faders.forEach(fader => {
+    faders.forEach(fader => {
       appearOnScroll.observe(fader);
-  });
-</script>
+    });
+  </script>
 
 <div class="footer">
   © 2025 Oloyede Favour. All rights reserved.
